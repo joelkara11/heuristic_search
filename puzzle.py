@@ -1,5 +1,11 @@
-# puzzle.py
-# --- 8-Puzzle: State representation, moves, solvability, random generation ---
+# -----------------------------------------------------------
+# Module: puzzle.py
+# Inputs: State (tuple of 9 ints), optional steps/seed
+# Outputs: Neighbors, random solvable states, bool (solvable)
+# Function: Represents the 8-puzzle board; generates legal moves,
+#           checks solvability (inversions), and produces random solvable states.
+# -----------------------------------------------------------
+
 
 from typing import Tuple, Iterable
 import random

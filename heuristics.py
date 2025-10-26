@@ -1,5 +1,11 @@
-# heuristics.py
-# --- Admissible heuristics for 8-puzzle ---
+# -----------------------------------------------------------
+# Module: heuristics.py
+# Inputs: State (tuple of 9 ints)
+# Outputs: Nonnegative heuristic value (int)
+# Function: Implements Hamming and Manhattan distance heuristics
+#           for the 8-puzzle (both admissible).
+# -----------------------------------------------------------
+
 
 from typing import Tuple
 State = Tuple[int, ...]

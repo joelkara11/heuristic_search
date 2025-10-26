@@ -1,5 +1,10 @@
-# astar.py
-# --- Generic A* implementation for the 8-puzzle ---
+# -----------------------------------------------------------
+# Module: astar.py
+# Inputs: Start state, heuristic function h(state)
+# Outputs: Path (list of states), number of expanded nodes (int)
+# Function: A* search for the 8-puzzle using a min-heap (f = g + h),
+#           g-cost = number of moves, includes closed set and path reconstruction.
+# -----------------------------------------------------------
 
 from heapq import heappush, heappop
 from itertools import count

@@ -1,5 +1,12 @@
-# benchmark.py
-# --- Run A* 100× for both heuristics and measure time + nodes ---
+# -----------------------------------------------------------
+# Module: benchmark.py
+# Inputs: Number of runs (int), random seed (int)
+# Outputs: Console summary, CSV file with per-run results
+# Function: Runs 100 randomized, solvable 8-puzzle problems with both
+#           heuristics, measures expanded nodes and runtime,
+#           computes mean and standard deviation.
+# -----------------------------------------------------------
+
 
 import time, random, statistics, csv
 from puzzle import random_walk, GOAL
@@ -40,7 +47,10 @@ def run_experiment(n_runs=100, seed=42):
         }
 
     # Print summary
-    print("\\n=== SUMMARY (100 runs) ===")
+    print("\n=== SUMMARY (100 runs) ===")
+    print("Heuristic Performance Comparison")
+    print("(Expanded Nodes and Computing Time)\n")
+
     for h,v in summary.items():
         print(f"{h.upper():10s} | Expanded: {v['expanded_mean']:.1f} ± {v['expanded_std']:.1f}"
               f" | Time: {v['time_mean_ms']:.1f} ± {v['time_std_ms']:.1f} ms")
